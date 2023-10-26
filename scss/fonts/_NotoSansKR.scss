@@ -1,0 +1,16 @@
+﻿@mixin font-face($name, $file, $weight: noraml, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url('fonts/NotoSansKR/#{$file}.woff') format('woff'),
+        url('fonts/NotoSansKR/#{$file}.woff2') format('woff2'),
+        url('fonts/NotoSansKR/#{$file}.otf') format('opentype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+@include font-face('Noto Sans KR', 'NotoSansKR-Thin', 100);
+@include font-face('Noto Sans KR', 'NotoSansKR-Light', 300);
+@include font-face('Noto Sans KR', 'NotoSansKR-Regular', 400);
+@include font-face('Noto Sans KR', 'NotoSansKR-Medium', 500);
+@include font-face('Noto Sans KR', 'NotoSansKR-Bold', 700);
+@include font-face('Noto Sans KR', 'NotoSansKR-Black', 900);
